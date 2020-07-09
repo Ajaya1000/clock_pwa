@@ -1,0 +1,131 @@
+$watch-radius:250px;
+$watch-inner:15px;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    // height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .container {
+        margin-top: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .analog {
+            position: relative;
+            width: $watch-radius;
+            height: $watch-radius;
+            border-radius: 50%;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 92.71%, #4B4A4A 93.7%),
+                #1e1a1a;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: calc(50% - calc(#{$watch-inner} * 0.5)); //calc($watch-inner * 0.5)
+                left: calc(50% - calc(#{$watch-inner} * 0.5));
+                width: $watch-inner;
+                height: $watch-inner;
+                border-radius: 50%;
+                background: #3466b3;
+            }
+
+            .label {
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                span {
+                    position: absolute;
+
+                    width: 5%;
+                    height: 2px;
+                    background: #fff;
+                    transform-origin: left;
+
+                    &:nth-child(1) {
+                        top: 3%;
+                        left: 50%;
+                        transform: rotate(90deg);
+                    }
+
+                    &:nth-child(2) {
+                        bottom: 3%;
+                        left: 50%;
+                        transform: rotate(-90deg);
+                    }
+
+                    &:nth-child(3) {
+                        top: 50%;
+                        left: 3%;
+                        transform: rotate(0deg);
+                    }
+
+                    &:nth-child(4) {
+                        top: 50%;
+                        right: 3%;
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+
+            .hands {
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    background: #fff;
+                    border-bottom-right-radius: 50%;
+                    border-top-right-radius: 50%;
+                    transform-origin: left;
+
+                    &.second {
+                        width: 40%;
+                        height: 1px;
+                    }
+
+                    &.minute {
+                        width: 30%;
+                        height: 2px;
+
+                        transform: rotate(-30deg)
+                    }
+
+                    &.hour {
+                        width: 20%;
+                        height: 2px;
+
+                        transform: rotate(-180deg)
+                    }
+                }
+            }
+
+            .digital {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                // z-index: 1;
+                top: 45%;
+                left: 30%;
+                font-size: 1.8rem;
+                color: #555;
+                font-weight: 900;
+                // -webkit-box-reflect: below 10px linear-gradient(transparent, #000);
+            }
+        }
+
+
+    }
+}

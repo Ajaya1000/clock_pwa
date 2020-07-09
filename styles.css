@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .container {
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .container .analog {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 92.71%, #4B4A4A 93.7%), #1e1a1a;
+}
+body .container .analog::after {
+  position: absolute;
+  content: "";
+  top: calc(50% - calc(15px * 0.5));
+  left: calc(50% - calc(15px * 0.5));
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #3466b3;
+}
+body .container .analog .label {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .container .analog .label span {
+  position: absolute;
+  width: 5%;
+  height: 2px;
+  background: #fff;
+  transform-origin: left;
+}
+body .container .analog .label span:nth-child(1) {
+  top: 3%;
+  left: 50%;
+  transform: rotate(90deg);
+}
+body .container .analog .label span:nth-child(2) {
+  bottom: 3%;
+  left: 50%;
+  transform: rotate(-90deg);
+}
+body .container .analog .label span:nth-child(3) {
+  top: 50%;
+  left: 3%;
+  transform: rotate(0deg);
+}
+body .container .analog .label span:nth-child(4) {
+  top: 50%;
+  right: 3%;
+  transform: rotate(0deg);
+}
+body .container .analog .hands span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  transform-origin: left;
+}
+body .container .analog .hands span.second {
+  width: 40%;
+  height: 1px;
+}
+body .container .analog .hands span.minute {
+  width: 30%;
+  height: 2px;
+  transform: rotate(-30deg);
+}
+body .container .analog .hands span.hour {
+  width: 20%;
+  height: 2px;
+  transform: rotate(-180deg);
+}
+body .container .analog .digital {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 45%;
+  left: 30%;
+  font-size: 1.8rem;
+  color: #555;
+  font-weight: 900;
+}
+
+/*# sourceMappingURL=styles.css.map */
