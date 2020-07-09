@@ -6,7 +6,7 @@
         "type": "image/png",
         "sizes": "1024x1024"
     }],
-    "start_url": "./clock_pwa",
+    "start_url": ".",
     "display": "standalone",
     "theme_color": "#000",
     "background_color": "#000"
