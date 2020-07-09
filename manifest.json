@@ -2,7 +2,7 @@
     "short_name": "clock",
     "name": "digital and analog clock",
     "icons": [{
-        "src": "/clock_pwa/clock.png",
+        "src": "./clock.png",
         "type": "image/png",
         "sizes": "1024x1024"
     }],

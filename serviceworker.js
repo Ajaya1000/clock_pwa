@@ -1,5 +1,5 @@
-var CACHE_NAME= 'version-2'
-var urlsToCache = ['./', './index.html', './styles.css', './favicon.ico'];
+var CACHE_NAME= 'version-3'
+var urlsToCache = ['/', 'index.html', 'styles.css', 'favicon.ico'];
 self.addEventListener('install',(event)=>{
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache)=>{
