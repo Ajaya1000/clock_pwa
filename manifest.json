@@ -1,0 +1,13 @@
+{
+    "short_name": "clock",
+    "name": "digital and analog clock",
+    "icons": [{
+        "src": "/clock.png",
+        "type": "image/png",
+        "sizes": "1024x1024"
+    }],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000",
+    "background_color": "#000"
+}
